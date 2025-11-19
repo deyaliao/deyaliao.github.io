@@ -13,6 +13,10 @@ body {
     overflow-x: hidden;
     padding-top: 20px;
   }
+
+  .sidenav-tab {
+    padding-left: 20px;
+  }
   
   .sidenav a {
     padding: 6px 8px 6px 30px;
@@ -62,19 +66,42 @@ body {
     padding-bottom: 0px;
   }
 
-  #DeyaIntro {
-    max-inline-size: 800px;
+ 
+  .about {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    padding-right: 10px;
   }
-   #DeyaImg {
-    max-width:60%;
+
+  .about-text {
+    flex: 1;
+  }
+
+  .about-photo {
+    flex: 0 0 340px; /* photo column width */
+  }
+
+  .about-photo img {
+    width: 80%;
     height: auto;
+    max-width: 340px;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .about { flex-direction: column; text-align: center; }
+    .about-text { width: 100%; }
+    .about-photo img { width: 60%; max-width: 320px; }
+    .about-text ol { margin-left: 1rem; text-align: left; display: inline-block; }
   }
 
   /* PHOTO  */
   .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    column-gap: 3%;
+    column-gap: 5%;
     row-gap: 5%;
   }
 
@@ -89,33 +116,39 @@ body {
 
   .grid-item img { 
     object-fit: cover;
-    min-height: 90%;
-    max-width: 100%;
   }
 
   /* Responsive Layout for Photos */
   .row {
-    display: -ms-flexbox; /* IE10 */
+    /* display: -ms-flexbox; IE10 */
     display: flex;
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
-    padding: 0 4px;
-
+    /* gap: 5%; */
   }
   
-  /* Create four equal columns that sits next to each other */
+  /* Create three equal columns that sits next to each other */
   .column {
-    -ms-flex: 25%; /* IE10 */
-    flex: 25%;
-    max-width: 40%;
-    padding: 0 4px;
+    flex: 30%;   
+    -ms-flex: wrap; /* IE10 */
+    align-items: flex-start;
     /* justify-content: center; */
   }
   
   .column img {
-    margin-top: 8px;
     vertical-align: middle;
-    width: 100%;
+    width: 90%;
+    padding: 5%;
+  }
+
+  .video {
+    display: flex;
+    flex: 5%;
+    max-width: 20%;
+  }
+
+  .photo-blurb {
+    width: 66%;
   }
   
   /* Responsive layout - makes a two column-layout instead of four columns */
