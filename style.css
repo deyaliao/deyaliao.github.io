@@ -141,16 +141,14 @@ body {
     padding: 5%;
   }
 
-  .video {
-    display: flex;
-    flex: 5%;
-    max-width: 20%;
-  }
-
   .photo-blurb {
     width: 66%;
   }
   
+  .instagram-media {
+    width: 30%;
+  }
+
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
     .column {
@@ -169,7 +167,7 @@ body {
     }
   }
 
-  /* VIDEO */
+  VIDEO
   .two-col .grid-container {
     grid-template-columns: 2fr 1fr;
     margin-right: 7%;
